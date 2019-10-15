@@ -48,6 +48,5 @@ for c in cnts:
 # Drawing the selected contour on the original image
 cv2.drawContours(image, [NumberPlateCnt], -1, (0,255,0), 3)
 cv2.imwrite("detected_"+args["image"], image)
-# cv2.imshow("Final Image With Number Plate Detected", image)
-
+#cv2.imshow("Final Image With Number Plate Detected", image)
 #cv2.waitKey(0) #Wait for user input before closing the images displayed
