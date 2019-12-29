@@ -1,5 +1,5 @@
 # auto-tag-lk
-Automatic License Plate Detection System with Computer Vision for Sri Lanka
+Automatic License Plate Detection System with Computer Vision for Sri Lanka.
 
 ### Guide
 
@@ -30,8 +30,6 @@ Automatic License Plate Detection System with Computer Vision for Sri Lanka
 
 #### 4. Output will be in "temp folder".
 
-#### 5. Change code as you wish. Try to understand the script.
-
 ### To-do
 
 - [x] Detect white plates
@@ -39,3 +37,9 @@ Automatic License Plate Detection System with Computer Vision for Sri Lanka
 - [x] Recognize plates (accuracy varies)
 - [ ] Web interface
 - [x] Recognize from video/image files
+
+### Contributing
+
+Any improvement to AutoTag-LK is welcome. The most helpful way is to try it out and give feedback. Feel free to use the Github issue tracker and pull requests to discuss and submit code changes.
+
+Enjoy!
