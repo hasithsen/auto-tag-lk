@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+# Create and save a video by combining multiple image file.
+
 import cv2
 import numpy as np
 import glob
