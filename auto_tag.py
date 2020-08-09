@@ -200,7 +200,7 @@ def main():
     vidcap = cv2.VideoCapture(args["source"])
     success,image = vidcap.read()
     frame_num = 0 
-    capture_frequency = args["frequency"] # [10, 15] enough for realtime
+    capture_frequency = args["frequency"] # [10, 15] enough for ~24 fps video for near-realtime
     print("Extracting once every {0} frames ...".format(capture_frequency))
     while success:
       if frame_num % capture_frequency == 0:
