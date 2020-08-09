@@ -173,9 +173,9 @@ def generate_video():
 
 def main():
   ap = argparse.ArgumentParser()
-  ap.add_argument("-s", "--source", type=str, required=True, help="path to source")
-  ap.add_argument("-f", "--fps", type=int, default=15, help="frame capture frequency for video (integer)")
-  ap.add_argument("-o", "--output-dir", type=str, default="temp", help="directory to save output")
+  ap.add_argument("-s", "--source", type=str, required=True, help="Path to source")
+  ap.add_argument("-f", "--frequency", type=int, default=15, help="Process once every n frames (integer)")
+  ap.add_argument("-o", "--output-dir", type=str, default="temp", help="Directory to save output")
   args = vars(ap.parse_args())
 
   global out_dir
@@ -200,10 +200,10 @@ def main():
     vidcap = cv2.VideoCapture(args["source"])
     success,image = vidcap.read()
     frame_num = 0 
-    capture_fps = args["fps"] # [10, 15] enough for realtime
-    print("Extracting once every {0} frames ...".format(capture_fps))
+    capture_frequency = args["frequency"] # [10, 15] enough for realtime
+    print("Extracting once every {0} frames ...".format(capture_frequency))
     while success:
-      if frame_num % capture_fps == 0:
+      if frame_num % capture_frequency == 0:
         print("Processing frame #:", frame_num)
         img = cv2.resize(image, (0,0), fx=0.6, fy=0.6)
         process_img(img, source_filename.rsplit(".")[0], frame_num)

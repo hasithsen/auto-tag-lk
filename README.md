@@ -17,20 +17,20 @@ auto-tag-lk/
 
 #### 2. Place any image/video files inside ```footage``` directory.
 
-#### 3. Use script as follows:
+#### 3. Use as follows:
 
-###### For still image input:
+###### Images:
   ```
   python3 auto_tag.py -s footage/car_image.png
   ```
   + "car_image.png" would be a image file containing vehicles.
 
-###### For video footage input:
+###### Videos:
   ```
-  python3 auto_tag.py -s footage/car_video.avi -f 15
+  python3 auto_tag.py -source footage/car_video.avi -frequency 15
   ```
-  + -s: "car_video.avi" would be a video file containing vehicles.
-  + -f: "15" is video frame capturing frequency (i.e. every 15th frame).
+  + -source \| -s: "car_video.avi" would be a video file containing vehicles.
+  + -frequency \| -f: "15" processes a frame every 15 frames.
 
 #### 4. Output will reside in ```temp``` directory.
 
